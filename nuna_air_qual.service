@@ -1,0 +1,17 @@
+[Unit]
+Description=NUNA air quality sensor and USB gadget service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 -u autorun_example.py
+# Change your user name here
+WorkingDirectory=/home/jonathan/NUNA
+# You may wish to explore these options
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+# Also change this to your user name
+User=jonathan
+
+[Install]
+WantedBy=multi-user.target
